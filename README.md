@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [](https://estebanrodriguez28.github.io/blog-preview-card/)
+- Live Site URL: [Live Site](https://estebanrodriguez28.github.io/blog-preview-card/)
 
 ## My process
 
@@ -77,11 +77,12 @@ Used ampersand (&) to include hover pseudo class for the heading element, ampers
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+- In future I would like to continue practicing semantic HTML and get lots of practice with challenges like this
+- Maybe explore more reusable css conventions like BEM
 
 ### Useful resources
 
-- [Example resource 1](https://clampcalculator.com/) - This helped me to calculate the middle value of clamp
+- [Clamp Calculator](https://clampcalculator.com/) - This helped me to calculate the middle value of clamp
 
 ### AI Collaboration
 
@@ -90,5 +91,4 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Author
 
-- Website - [Esteban](https://estebanrodriguez28.github.io/portfolio-website/)
 - Frontend Mentor - [@estebanrodriguez28](https://www.frontendmentor.io/profile/estebanrodriguez28)
