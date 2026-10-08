@@ -17,8 +17,6 @@ This is a solution to the [Blog preview card challenge on Frontend Mentor](https
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -29,95 +27,68 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](blog-card-screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [](https://estebanrodriguez28.github.io/blog-preview-card/)
 
 ## My process
+
+- Began with creating the structure using semantic html (main, article, header tags)
+- Created base css styles first (css reset, fonts)
+- Added css styles for each element starting at the top then working down
 
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+- Basics of Figma for a developer, usually use the right hand side of the pane when inspecting elements (w/ command shortcut for mac) to get values such as padding/font sizes
+- Article is a semantic html tag used for independent content that can make sense on its own such as a blog post, comment, or product card
+- For css reset use border-box for box sizing to make spacing/margins more predictable, it accounts for these so you get expected width/height for elements
+- You can use the @font-face property in css to set up custom fonts
+- CSS base styles are properties that remain consistent accross your site (resets, hyperlinks, fonts) and should start with those before moving on to rest of css
+- The css property clamp can help make elements responsive without needing media queries such as text. To use clamp define the minimum and maximum values (first and third paramerter) then calculate preferred value (second parameter) which is in vw I used a calculator for this and it determines how fast the size grows from the minimum value to the maximum
+- Relative vs absolute paths, absolute starts at the root (/) relative paths start from the current working directory. To use relative paths use ./ for current directory or ../ for parent or just type the file path for current directory. Most of time we use relative paths for elements like images in web development projects.
 
-To see how you can add code snippets, see below:
+Code snippets would like to highlight:
+
+Didn't know the time html tag existed, better SEO + more semantic html
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<p>Published <time datetime="2023-12-21">21 Dec 2023</time></p>
 ```
+
+Used ampersand (&) to include hover pseudo class for the heading element, ampersand allows nesting to reflect html structure more in css
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.blog-card-content h3 {
+  font-size: clamp(16px, calc(14.592px + 0.376vw), 20px);
+  &:hover {
+    cursor: pointer;
+    color: var(--yellow);
+  }
 }
 ```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
 Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Example resource 1](https://clampcalculator.com/) - This helped me to calculate the middle value of clamp
 
 ### AI Collaboration
 
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
-
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
-
-**Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
+- Claude
+- I asked if it made sense to use css combinators or use actual html tags for styling instead of classes. Said was fine for one off projects. Introduced me to BEM naming conventions for css to keep in mind for future.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [Esteban](https://estebanrodriguez28.github.io/portfolio-website/)
+- Frontend Mentor - [@estebanrodriguez28](https://www.frontendmentor.io/profile/estebanrodriguez28)
