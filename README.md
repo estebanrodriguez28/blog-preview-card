@@ -65,11 +65,20 @@ Didn't know the time html tag existed, better SEO + more semantic html
 
 Used ampersand (&) to include hover pseudo class for the heading element, ampersand allows nesting to reflect html structure more in css
 
+The focus-visible pseudo class is useful for focusing an element for keyboard users. In this case there's an a tag within the header tag containing blog title. Focus-visble pseduo class added to the a tag so that a keyboard user can focus on the element. Note the a tag must have href even if there is no link you can just use the placehodler # demonstrated below, otherwise the focus-visible pseduo class wont trigger
+
+```html
+<h1><a href="#">HTML & CSS foundations</a></h1>
+```
+
 ```css
-.blog-card-content h3 {
-  font-size: clamp(16px, calc(14.592px + 0.376vw), 20px);
+.blog-card-content h1 {
+  font-size: clamp(20px, calc(18.597px + 0.375vw), 24px);
   &:hover {
     cursor: pointer;
+    color: var(--yellow);
+  }
+  & a:focus-visible {
     color: var(--yellow);
   }
 }
