@@ -110,7 +110,8 @@ main {
   width: 32px;
 }
 
-.blog-card-footer p {
+.blog-card-footer__author {
+  font-weight: 800;
   font-size: 0.875rem;
 }
 
